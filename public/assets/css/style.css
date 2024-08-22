@@ -1,0 +1,149 @@
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Background color for body */
+}
+
+#terminal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background-color: #2b2b2b; /* Background color for terminal */
+    color: #d4d4d4; /* Text color for terminal */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+#title-bar {
+    height: 30px;
+    background-color: #1e1e1e; /* Background color for title bar */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#title {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #ffffff; /* Text color for title */
+}
+
+#close-btn, #minimize-btn, #maximize-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+#close-btn {
+    background-color: #ff5f56; /* Red */
+}
+
+#minimize-btn {
+    background-color: #ffbd2e; /* Yellow */
+}
+
+#maximize-btn {
+    background-color: #27c93f; /* Green */
+}
+
+#terminal-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#output {
+    white-space: pre-wrap;
+}
+
+#input-line {
+    display: flex;
+    margin-top: 10px;
+}
+
+#prompt {
+    margin-right: 5px;
+}
+
+#input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+#theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#theme-toggle button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#theme-toggle button#dark-theme-btn {
+    background-color: #363636;
+    color: #ffffff;
+}
+
+#theme-toggle button#light-theme-btn {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.minimized {
+    height: 30px !important;
+}
+
+.maximized {
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+}
+
+footer {
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.github {
+    text-align: center;
+}
+
+.github a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body.dark-theme #terminal {
+    background-color: #2b2b2b;
+    color: #d4d4d4;
+}
+
+body.light-theme #terminal {
+    background-color: #ffffff;
+    color: #000000;
+}
